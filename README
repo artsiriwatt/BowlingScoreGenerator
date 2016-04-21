@@ -6,3 +6,6 @@ Python BowlingScoreGenerator.py John 6 2 7 1 10 9 0 8 2 10 10 3 5 7 2 5 5 8
 The script does error checking to ensure the rolls input is valid. 
 To Run Tests: 
 Python test.py
+
+This script uses PrettyTable to generate the table of frames. To install it, use: 
+pip install https://pypi.python.org/packages/source/P/PrettyTable/prettytable-0.7.2.tar.bz2
