@@ -33,21 +33,11 @@ class TestBowlingScoreMethods(unittest.TestCase):
 	def test_perfect_score(self):
 		self.assertEqual(generate_score('John', ['10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10'])[0], 300)
 
+	def test_normal_game(self):
+		self.assertEqual(generate_score('John', ['6', '2', '7', '1', '10', '9', '0', '8', '2', '10', '10', '3', '5', '7', '2', '5', '5', '8'])[0], 140)
+
 	def test_zero_score(self):
 		self.assertEqual(generate_score('John', ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'])[0], 0)
-
-	'''
-	def test_isupper(self):
-		self.assertTrue('FOO'.isupper())
-		self.assertFalse('Foo'.isupper())
-
-	def test_split(self):
-		s = 'hello world'
-		self.assertEqual(s.split(), ['hello', 'world'])
-		# check that s.split fails when the separator is not a string
-		with self.assertRaises(TypeError):
-			s.split(2)
-	'''
 
 if __name__ == '__main__':
 	unittest.main()
